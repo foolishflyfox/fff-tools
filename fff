@@ -1,0 +1,17 @@
+#! /bin/zsh
+
+# 获取 fff 软链接路径
+FFF_SYSPATH=$(where fff)
+# 获取 fff 真实文件路径
+FFF_REALPATH=$(ls -l $FFF_SYSPATH | awk 'NF{print $NF;}')
+# 获取 fff 真实文件所在文件夹
+FFF_DIR=${FFF_REALPATH%/*}
+
+echo $FFF_DIR
+if [ -z $1 ]; then
+    echo "hello, fff"
+else
+    # 路由处理脚本
+    $FFF_DIR/$1
+fi
+
