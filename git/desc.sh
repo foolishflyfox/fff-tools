@@ -9,7 +9,7 @@ helpFun() {
 }
 
 if [ $# = 0 ] ; then
-    git br | grep $(git branch --show-current)
+    git br | grep $(git branch --show-current) | grep "*"
 elif [ $# = 1 ] ; then
     if [ $1 = "-h" ] || [ $1 = "--help" ] || [ $1 = "-b" ] || [ $1 = "--branch" ]; then
         helpFun
