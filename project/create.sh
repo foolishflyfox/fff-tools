@@ -12,7 +12,9 @@ def createJavaGradleSpringbootProject() {
     fi
     echo "creating $project_name ..."
     echo "\tgradle version: $gradle_version"
-    cp -r $FFF_DIR/project/gradle4-springboot .
+    cp -r $FFF_DIR/project/gradle4-springboot ./$project_name
+    echo "rootProject.name = '$project_name'" > $project_name/settings.gradle
+    mkdir -p $project_name/src/{main/{java,resources},test/{java,resources}}
     echo "finished! enjoy it ^_^"
     return
 }
