@@ -26,5 +26,6 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+	// 指定是否快速失败，true 表示只要有一个单测失败就停止后面的单侧
+	failFast = false
 }

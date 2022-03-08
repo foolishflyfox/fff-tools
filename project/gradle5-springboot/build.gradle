@@ -27,6 +27,7 @@ dependencies {
     testCompile "junit:junit:4.12"
 }
 
-// test {
-//     useJUnitPlatform()
-// }
+test {
+	// 指定是否快速失败，true 表示只要有一个单测失败就停止后面的单侧
+    failFast = false
+}
