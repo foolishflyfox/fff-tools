@@ -1,5 +1,5 @@
 #! /bin/zsh
-ZK_HOME=/export/server/zookeeper-3.5.7
+source $FFF_DIR/zk/config.txt
 
 for slave in `cat $FFF_DIR/data/slave.txt`
 do

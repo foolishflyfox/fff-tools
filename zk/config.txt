@@ -1,0 +1,1 @@
+ZK_HOME=/export/server/zookeeper-3.5.7
