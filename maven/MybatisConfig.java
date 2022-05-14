@@ -43,10 +43,14 @@ public class MybatisConfig {
         return ssfb;
     }
 
+    /**
+     * 注意使用静态方法
+     */
     @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer() {
+    public static MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setBasePackage("com.bfh.dao");
         return mapperScannerConfigurer;
     }
+
 }
